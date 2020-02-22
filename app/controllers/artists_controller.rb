@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-class ArtistsController < ApplicationController
-  def index
-  end
-
-  def new
-  end
-
-  def edit
-  end
-end
-=======
 # frozen_string_literal: true
 
 class ArtistsController < ApplicationController
@@ -58,4 +46,3 @@ class ArtistsController < ApplicationController
     params.require(:artist).permit(:name)
   end
 end
->>>>>>> 776033754655399c85a3893f2f6f6582761653ff
