@@ -1,0 +1,8 @@
+<p>
+  <%= @artist.id ? "Create a new Artist" : "Edit #{@artist.name}" %>
+  <%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+</p>
