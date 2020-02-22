@@ -282,3 +282,545 @@ Processing by SongsController#index as HTML
 Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 0.5ms | Allocations: 6318)
 
 
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 14:57:41 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 75)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 0.4ms | Allocations: 6639)
+
+
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 14:58:12 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 253)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 14.7ms | ActiveRecord: 1.3ms | Allocations: 6803)
+
+
+Started GET "/artists" for ::1 at 2020-02-22 14:58:13 -0700
+Processing by ArtistsController#index as HTML
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/artists/index.html.erb:4
+  Rendered artists/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.5ms | Allocations: 6485)
+
+
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 14:58:19 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 5767)
+
+
+Started GET "/rails/info/routes" for ::1 at 2020-02-22 15:06:47 -0700
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/scottkey/.rvm/gems/ruby-2.7.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/scottkey/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (Duration: 12.1ms | Allocations: 4943)
+  Rendered /Users/scottkey/.rvm/gems/ruby-2.7.0/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 1.4ms | Allocations: 685)
+  Rendered /Users/scottkey/.rvm/gems/ruby-2.7.0/gems/railties-6.0.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 18.7ms | Allocations: 9329)
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 10593)
+
+
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:06:48 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 9821)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.5ms | Allocations: 11622)
+
+
+
+NameError - uninitialized constant ActionView::Template::SyntaxErrorInTemplate
+Did you mean?  ActionView::SyntaxErrorInTemplate:
+
+Started POST "/__better_errors/f7528ebc90160908/variables" for ::1 at 2020-02-22 15:06:48 -0700
+  [1m[36mSong Load (1.2ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 2], ["LIMIT", 11]]
+Started POST "/__better_errors/f7528ebc90160908/variables" for ::1 at 2020-02-22 15:07:05 -0700
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 2], ["LIMIT", 11]]
+  [1m[36mCACHE Song Load (0.1ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 2], ["LIMIT", 11]]
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 2], ["LIMIT", 11]]
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 2], ["LIMIT", 11]]
+  [1m[36mCACHE Song Load (0.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 2], ["LIMIT", 11]]
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:07:06 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1081)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 0.9ms | Allocations: 7647)
+
+
+Started GET "/artists/2/songs/new" for ::1 at 2020-02-22 15:07:07 -0700
+Processing by SongsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 8.3ms | Allocations: 6803)
+
+
+
+ActionView::MissingTemplate - Missing partial songs/_form, application/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/scottkey/coding/dpl/Week2/billboard/app/views"
+  * "/Users/scottkey/.rvm/gems/ruby-2.7.0/gems/actiontext-6.0.2.1/app/views"
+  * "/Users/scottkey/.rvm/gems/ruby-2.7.0/gems/actionmailbox-6.0.2.1/app/views"
+:
+  app/controllers/songs_controller.rb:12:in `new'
+
+Started POST "/__better_errors/7d170ae0fd0ed9d1/variables" for ::1 at 2020-02-22 15:07:08 -0700
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:07:12 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 1.2ms | Allocations: 6480)
+
+
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:08:22 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 0.9ms | Allocations: 7625)
+
+
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:14:28 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 20.5ms | ActiveRecord: 1.7ms | Allocations: 12128)
+
+
+Started GET "/artists/2/songs/new" for ::1 at 2020-02-22 15:14:29 -0700
+Processing by SongsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendered songs/_form.html.erb (Duration: 311.3ms | Allocations: 152750)
+Completed 500 Internal Server Error in 327ms (ActiveRecord: 0.6ms | Allocations: 157476)
+
+
+
+NameError - undefined local variable or method `artist_topics_path' for #<#<Class:0x00007ffb230741c8>:0x00007ffb206bf300>
+Did you mean?  artist_song_path
+               artist_songs_path:
+  app/views/songs/_form.html.erb:2
+  app/controllers/songs_controller.rb:12:in `new'
+
+Started POST "/__better_errors/759b120c64e77dbb/variables" for ::1 at 2020-02-22 15:14:30 -0700
+Started GET "/artists/2/songs/new" for ::1 at 2020-02-22 15:15:20 -0700
+Processing by SongsController#new as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+  Rendered songs/_form.html.erb (Duration: 20.0ms | Allocations: 5449)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.6ms | Allocations: 6794)
+
+
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:15:32 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.5ms | Allocations: 1630)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:55:in `set_song'
+
+Started POST "/__better_errors/698a822569070606/variables" for ::1 at 2020-02-22 15:15:32 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:16:06 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+Completed 404 Not Found in 31ms (ActiveRecord: 19.4ms | Allocations: 5168)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:55:in `set_song'
+
+Started POST "/__better_errors/2cf271a86c5d4460/variables" for ::1 at 2020-02-22 15:16:06 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:16:50 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:51:in `set_artist'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 8.0ms | Allocations: 4964)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/controllers/songs_controller.rb:55:in `set_song'
+
+Started POST "/__better_errors/5b0f7cdbf626ea44/variables" for ::1 at 2020-02-22 15:16:50 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:19:47 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:52:in `set_artist'
+Completed 404 Not Found in 46ms (ActiveRecord: 28.1ms | Allocations: 5130)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:56:in `set_song'
+
+Started POST "/__better_errors/30b4e93188564672/variables" for ::1 at 2020-02-22 15:19:48 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:19:58 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:52:in `set_artist'
+Completed 404 Not Found in 34ms (ActiveRecord: 13.3ms | Allocations: 5172)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:56:in `set_song'
+
+Started POST "/__better_errors/039570bc9231e495/variables" for ::1 at 2020-02-22 15:19:58 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:23:25 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:52:in `set_artist'
+Completed 404 Not Found in 27ms (ActiveRecord: 13.9ms | Allocations: 6197)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:56:in `set_song'
+
+Started POST "/__better_errors/5e4d5bc801d56cc4/variables" for ::1 at 2020-02-22 15:23:25 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:23:34 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:52:in `set_artist'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 7.1ms | Allocations: 6366)
+
+
+
+NoMethodError - undefined method `Song' for #<Artist:0x00007ffb231743e8>
+Did you mean?  songs:
+  app/controllers/songs_controller.rb:56:in `set_song'
+
+Started POST "/__better_errors/db0f18603d21781a/variables" for ::1 at 2020-02-22 15:23:34 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:23:42 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:52:in `set_artist'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 8.5ms | Allocations: 6357)
+
+
+
+NoMethodError - undefined method `song' for #<Artist:0x00007ffb20535548>
+Did you mean?  songs:
+  app/controllers/songs_controller.rb:56:in `set_song'
+
+Started POST "/__better_errors/1ac6774be5b3d0b9/variables" for ::1 at 2020-02-22 15:23:42 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:24:03 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:52:in `set_artist'
+Completed 404 Not Found in 31ms (ActiveRecord: 17.0ms | Allocations: 6197)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:56:in `set_song'
+
+Started POST "/__better_errors/f7a4d862c2b2939a/variables" for ::1 at 2020-02-22 15:24:03 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:24:48 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+Completed 404 Not Found in 20ms (ActiveRecord: 9.7ms | Allocations: 6131)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:16:in `create'
+
+Started POST "/__better_errors/bd20c8389e2a1095/variables" for ::1 at 2020-02-22 15:24:48 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:25:32 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+Completed 404 Not Found in 55ms (ActiveRecord: 37.1ms | Allocations: 5073)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Song without an ID:
+  app/controllers/songs_controller.rb:16:in `create'
+
+Started POST "/__better_errors/a970fc7bbbc83141/variables" for ::1 at 2020-02-22 15:25:32 -0700
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:25:43 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/songs_controller.rb:19:in `create'
+  [1m[36mSong Create (3.9ms)[0m  [1m[32mINSERT INTO "songs" ("name", "body", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blah blah and the blah blahs"], ["body", "All the blahs"], ["artist_id", 2], ["created_at", "2020-02-22 22:25:43.659995"], ["updated_at", "2020-02-22 22:25:43.659995"]]
+  ↳ app/controllers/songs_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/songs_controller.rb:19:in `create'
+Redirected to http://localhost:3000/artists/2/songs/1
+Completed 302 Found in 43ms (ActiveRecord: 18.6ms | Allocations: 11331)
+
+
+Started GET "/artists/2/songs/1" for ::1 at 2020-02-22 15:25:43 -0700
+Processing by SongsController#show as HTML
+  Parameters: {"artist_id"=>"2", "id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:27:in `show'
+  Rendering songs/show.html.erb within layouts/application
+  Rendered songs/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 83)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 17.2ms | ActiveRecord: 0.9ms | Allocations: 7251)
+
+
+Started POST "/artists/2/songs" for ::1 at 2020-02-22 15:26:16 -0700
+Processing by SongsController#create as HTML
+  Parameters: {"authenticity_token"=>"ZYrvXul/7vYaM6bno1S74JgGNh4tGTON18AzyeqHHSiElUmJ4vNCgrGHrVHdaTtyi69h8Z2i9Xj4BTQeMc2Hsg==", "song"=>{"name"=>"Blah blah and the blah blahs", "body"=>"All the blahs"}, "commit"=>"Create Song", "artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/songs_controller.rb:19:in `create'
+  [1m[36mSong Create (0.8ms)[0m  [1m[32mINSERT INTO "songs" ("name", "body", "artist_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blah blah and the blah blahs"], ["body", "All the blahs"], ["artist_id", 2], ["created_at", "2020-02-22 22:26:16.421796"], ["updated_at", "2020-02-22 22:26:16.421796"]]
+  ↳ app/controllers/songs_controller.rb:19:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/songs_controller.rb:19:in `create'
+Redirected to http://localhost:3000/artists/2/songs
+Completed 302 Found in 43ms (ActiveRecord: 15.2ms | Allocations: 11165)
+
+
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:26:16 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (11.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (4.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 329.5ms | Allocations: 152144)
+Completed 500 Internal Server Error in 348ms (ActiveRecord: 16.2ms | Allocations: 153412)
+
+
+
+NameError - undefined local variable or method `delete' for #<#<Class:0x00007ffb24011c48>:0x00007ffb20eefbb0>:
+  app/views/songs/index.html.erb:11
+  app/views/songs/index.html.erb:8
+
+Started POST "/__better_errors/9ed4ba3257da2db6/variables" for ::1 at 2020-02-22 15:26:17 -0700
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:27:15 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 358.6ms | Allocations: 188194)
+Completed 500 Internal Server Error in 366ms (ActiveRecord: 0.8ms | Allocations: 189912)
+
+
+
+NameError - undefined local variable or method `delete' for #<#<Class:0x00007ffb1feb7b58>:0x00007ffb1feb6258>:
+  app/views/songs/index.html.erb:11
+  app/views/songs/index.html.erb:8
+
+Started POST "/__better_errors/98ea9030f2a06c10/variables" for ::1 at 2020-02-22 15:27:16 -0700
+Started POST "/__better_errors/98ea9030f2a06c10/variables" for ::1 at 2020-02-22 15:27:31 -0700
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:27:32 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 413.0ms | Allocations: 188241)
+Completed 500 Internal Server Error in 418ms (ActiveRecord: 0.8ms | Allocations: 189958)
+
+
+
+NameError - undefined local variable or method `delete' for #<#<Class:0x00007ffb269a5f00>:0x00007ffb219bbd28>:
+  app/views/songs/index.html.erb:11
+  app/views/songs/index.html.erb:8
+
+Started POST "/__better_errors/64197148800cd5a6/variables" for ::1 at 2020-02-22 15:27:32 -0700
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:28:33 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 441.2ms | Allocations: 192367)
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 13.6ms | Allocations: 197705)
+
+
+
+NameError - undefined local variable or method `delete' for #<#<Class:0x00007ffb1fb4ba28>:0x00007ffb229392a0>:
+  app/views/songs/index.html.erb:11
+  app/views/songs/index.html.erb:8
+
+Started POST "/__better_errors/03327e73cc55c2db/variables" for ::1 at 2020-02-22 15:28:34 -0700
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:29:25 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:53:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 393.4ms | Allocations: 192337)
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 12.5ms | Allocations: 197658)
+
+
+
+NameError - undefined local variable or method `delete' for #<#<Class:0x00007ffb20fbf838>:0x00007ffb20fbd4e8>:
+  app/views/songs/index.html.erb:11
+  app/views/songs/index.html.erb:8
+
+Started POST "/__better_errors/dea5e4fd765bc1d6/variables" for ::1 at 2020-02-22 15:29:26 -0700
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:30:53 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:53:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 348.7ms | Allocations: 188191)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 0.7ms | Allocations: 189912)
+
+
+
+NameError - undefined local variable or method `delete' for #<#<Class:0x00007ffb22cc0888>:0x00007ffb22c83050>:
+  app/views/songs/index.html.erb:11
+  app/views/songs/index.html.erb:8
+
+Started POST "/__better_errors/dea84fb675f8146f/variables" for ::1 at 2020-02-22 15:30:54 -0700
+Started POST "/__better_errors/dea84fb675f8146f/variables" for ::1 at 2020-02-22 15:31:03 -0700
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:31:03 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:53:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  Rendered songs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2375)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 4097)
+
+
+
+SyntaxError - syntax error, unexpected tLABEL, expecting ')'
+...ong_path(@artist, song) method: delete );@output_buffer.safe...
+...                        ^~~~~~~
+:
+  app/views/songs/index.html.erb:11:in `'
+
+Started POST "/__better_errors/9cc5f0cf2121096f/variables" for ::1 at 2020-02-22 15:31:03 -0700
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1 LIMIT $2[0m  [["artist_id", 2], ["LIMIT", 11]]
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:31:11 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:53:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1247)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.9ms | Allocations: 7833)
+
+
+Started DELETE "/artists/2/songs/2" for ::1 at 2020-02-22 15:31:14 -0700
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6GFE99Xii3AjLRdXVGAb03R3DnOZV2wbR1XHlW7wdPNDBJr5JOzQ9DynEOs8MX9Cmh6PZ6DI17Lkt1Ri3cT8xw==", "artist_id"=>"2", "id"=>"2"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:53:in `set_artist'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms | Allocations: 2071)
+
+
+
+NoMethodError - undefined method `find' for nil:NilClass:
+  app/controllers/songs_controller.rb:57:in `set_song'
+
+Started POST "/__better_errors/19cea76ed7dcff7c/variables" for ::1 at 2020-02-22 15:31:14 -0700
+Started DELETE "/artists/2/songs/2" for ::1 at 2020-02-22 15:31:31 -0700
+Processing by SongsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6GFE99Xii3AjLRdXVGAb03R3DnOZV2wbR1XHlW7wdPNDBJr5JOzQ9DynEOs8MX9Cmh6PZ6DI17Lkt1Ri3cT8xw==", "artist_id"=>"2", "id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:53:in `set_artist'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:57:in `set_song'
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/songs_controller.rb:46:in `destroy'
+  [1m[36mSong Destroy (11.8ms)[0m  [1m[31mDELETE FROM "songs" WHERE "songs"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/songs_controller.rb:46:in `destroy'
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/songs_controller.rb:46:in `destroy'
+Redirected to http://localhost:3000/artists/2/songs
+Completed 302 Found in 61ms (ActiveRecord: 32.6ms | Allocations: 9189)
+
+
+Started GET "/artists/2/songs" for ::1 at 2020-02-22 15:31:31 -0700
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"2"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/songs_controller.rb:53:in `set_artist'
+  Rendering songs/index.html.erb within layouts/application
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = $1[0m  [["artist_id", 2]]
+  ↳ app/views/songs/index.html.erb:8
+  Rendered songs/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2607)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.7ms | Allocations: 9325)
+
+

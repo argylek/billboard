@@ -2,7 +2,7 @@
 
 class SongsController < ApplicationController
   before_action :set_artist
-  before_action :set_song, only: %i[show create destroy update edit]
+  before_action :set_song, only: %i[show destroy update edit]
   def index
     @songs = @artist.songs
   end
@@ -13,9 +13,11 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = @artist.songs.new(songs_params)
+    # @song = Song.find(params[:id])
+    #before_action
+    @song = @songs.new(songs_params)
     if @song.save
-      redirect_to [@artist, @song]
+      redirect_to artist_songs_path
     else
       render :new
     end
@@ -52,7 +54,7 @@ class SongsController < ApplicationController
   end
 
   def set_song
-    @song = Song.find(params[:song_id])
+    @song = Song.find(params[:id])
   end
 
   def songs_params
