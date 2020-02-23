@@ -1,1 +1,5 @@
-<%= render partial: 'form' %>
+<h1>Edit Artist</h1>
+<%= render partial: 'form', artist: @artist %>
+
+<%= link_to 'Show Artists', artist_path(@artist.id)%>
+<%= link_to 'Back', artists_path %>

@@ -19,16 +19,16 @@ class ArtistsController < ApplicationController
     end
   end
 
+  def edit
+    #before_action
+  end
+
   def update
     if @artist.update(artist_params)
-      redirect_to artist_path
+      redirect_to @artist
     else
       render :edit
     end
-  end
-
-  def edit
-
   end
 
   def destroy

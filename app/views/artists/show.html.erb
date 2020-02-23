@@ -1,5 +1,6 @@
-<h1><%=@artist.name %>'s Artist Page</h1>
+<h1><%=@artist.name %></h1>
 
-<%= link_to "Edit Artist information", edit_artist_path(@artist) %>
+<%= link_to "Edit", edit_artist_path(@artist) %>
+<%= link_to "Songs", artist_songs_path(@artist) %>
+<%= link_to "Go Back", boards_path %>
 <%= link_to "Delete Artist(and all songs)", @artist, method: :delete %>
-<%= link_to "Go Back", artists_path %>

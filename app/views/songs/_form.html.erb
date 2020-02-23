@@ -1,11 +1,14 @@
 <h1><%= @song.id ? 'Edit Song' : 'Add new Song to Catalogue' %></h1>
-<%= link_to "back to artist page", artist_songs_path %>
 <hr/>
 <%= form_for [@artist, @song] do |f| %>
-  <%= f.label "Song Name:"%>
-  <%= f.text_field :name, required: true, autofocus: true %>
+<%= f.label :name %>
+<%= f.text_field :name, required: true, autofocus: true %>
 <br/>
-  <%= f.label "Song Description" %>
-  <%= f.text_area :body, required: true %>
-  <%= f.submit %>
+<%= f.label "Song Description" %>
+<%= f.text_area :body, required: true %>
+<br/>
+<%= f.label :board_id %>
+<%= f.number_field :board_id %>
+<%= f.submit %>
 <% end %>
+<%= link_to 'Back', artist_songs_path(@artist) %>

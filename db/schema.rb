@@ -21,14 +21,23 @@ ActiveRecord::Schema.define(version: 2020_02_22_214342) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "boards", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.text "body"
-    t.bigint "artist_id", null: false
+    t.bigint "artist_id"
+    t.bigint "board_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["artist_id"], name: "index_songs_on_artist_id"
+    t.index ["board_id"], name: "index_songs_on_board_id"
   end
 
   add_foreign_key "songs", "artists"
+  add_foreign_key "songs", "boards"
 end
