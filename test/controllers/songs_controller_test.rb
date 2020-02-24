@@ -11,13 +11,13 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get show" do
-    get songs_show_url
+  test "should get edit" do
+    get songs_edit_url
     assert_response :success
   end
 
-  test "should get edit" do
-    get songs_edit_url
+  test "should get show" do
+    get songs_show_url
     assert_response :success
   end
 

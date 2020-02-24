@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  body: MyText
   artist: one
 
 two:
   name: MyString
-  body: MyText
   artist: two

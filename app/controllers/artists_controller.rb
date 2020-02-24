@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class ArtistsController < ApplicationController
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
   def index
@@ -29,6 +27,11 @@ class ArtistsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def show
+    #before_action
+    @songs = @artist.songs
   end
 
   def destroy

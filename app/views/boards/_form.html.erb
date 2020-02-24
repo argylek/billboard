@@ -1,8 +1,0 @@
-<h1><%= @board.name ? 'Edit Billboard' : 'Create Billboard' %> </h1>
-<hr>
-
-<%= form_for @board do |f| %>
-  <%= f.label :name, required: true, placeholder: "Billboard Name" %>
-  <%= f.text_field :name, focus: true %>
-  <%= f.submit %>
-  <% end %>

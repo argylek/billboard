@@ -8,18 +8,18 @@
 
 require 'faker'
 
-Board.create(name: 'US Billboard')
-Board.create(name: 'EU Billboard')
-Board.create(name: 'Country Billboard')
+billboard_names = ['US Billboard', 'EU Billboard', 'Country/Western Billboard']
+
+
+billboard_names.each do |names|
+  Billboard.create(name: names)
+end
 
 10.times do |i|
-Artist.create(name: Faker::Artist.name)
-  40.times do |s|
-    artist.songs.create(
-      name: Faker::Music.band,
-      body: Faker::Quote.famous_last_words
-    )
-    end
+  artist = Artist.create(name: Faker::Artist.name)
+  5.times do |s|
+    artist.songs.create(name: Faker::Music::GratefulDead.song)
   end
+end
 
-  puts "seeded"
+puts "THINGS WERE SEEDED PROPERLY"

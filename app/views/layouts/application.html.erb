@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Billboard</title>
+    <title>Boards</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,7 +10,9 @@
   </head>
 
   <body>
-    <%= render partial: "layouts/navbar" %>
+    <%= link_to "Home", root_path, class: "active item"%>
+    <%= link_to "Billboards", billboards_path, class: "item"%>
+    <%= link_to "Artists", artists_path, class: "item"%>
     <%= yield %>
   </body>
 </html>

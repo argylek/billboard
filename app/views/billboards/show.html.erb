@@ -1,0 +1,11 @@
+<h3><%= link_to "Back to all Billboards", billboards_path %></h3>
+  <h3><%= link_to "Edit Billboard", edit_billboard_path %></h3>
+  <%# <!-- <h3><%= link_to "Delete Billboard", billboard_path(@billboard), method: :delete %>
+<h1> <%= @billboard.name %></h1>
+  <%= link_to 'Add song to charts!', new_billboard_song_path(@billboard) %>
+    <% if @songs.any? %>
+    <% @songs.each do |song| %>
+      <li><%= song.name %></li>
+      <li><%= link_to 'Send to the bottom of the charts', remove_billboard_song_path(@billboard, song), method: :delete %></li>
+    <% end %>
+  <% end %>

@@ -1,13 +1,13 @@
-<h1><%=@artist.name %>'s Artist Page</h1>
+<h1><%=@artist.name %>'s Artist song Page</h1>
 
 <%= link_to "Edit Artist information", edit_artist_path(@artist) %>
 <%= link_to "Delete Artist(and all songs)", @artist, method: :delete %>
 <%= link_to "Go Back to all Artists", artists_path%>
-<div>
-  <%= link_to "Create New song", new_artist_song_path(@artist) %>
-  <% @artist.songs.each do |song| %>
-    <h2><%= link_to song.name, artist_song_path(@artist, song) %></h2>
-    <%= link_to "Edit", edit_artist_song_path(@artist, song) %>
-    <%= link_to "Delete", artist_song_path(@artist, song), method: :delete %>
-  <% end %>
-</div>
+
+<%= link_to "Create New song", new_artist_song_path %>
+
+<% @songs.each do |song| %>
+  <h2><%= link_to song.name, artist_song_path(@artist, song) %></h2>
+  <%= link_to "Edit", edit_artist_song_path(@artist, song) %>
+  <%= link_to "Delete", artist_song_path(@artist.id, song), method: :delete %>
+<% end %>

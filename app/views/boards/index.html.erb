@@ -1,6 +1,0 @@
-<h1> Billboards </h1>
-<h3> <%= link_to 'Create Billboard', new_board_path %></h3>
-<hr />
-<% @boards.each do |billboard| %>
-  <h2> <%= link_to billboard.name, board_path(billboard.id) %></h2>
-<% end %>

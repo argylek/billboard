@@ -1,8 +1,8 @@
-<p>
-  <%= @artist.id ? "Create a new Artist" : "Edit #{@artist.name}" %>
-    <%= form_for @artist do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.submit %>
-  <% end %>
-</p>
+<h1>
+  <%= @artist.id ? 'Edit Artist' : 'Create a new Artist' %></h1>
+
+  <%= form_for @artist do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <%= f.submit %>
+<% end %>

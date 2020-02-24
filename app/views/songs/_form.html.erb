@@ -4,11 +4,11 @@
 <%= f.label :name %>
 <%= f.text_field :name, required: true, autofocus: true %>
 <br/>
-<%= f.label "Song Description" %>
-<%= f.text_area :body, required: true %>
-<br/>
-<%= f.label :board_id %>
-<%= f.number_field :board_id %>
+<% billboard = Billboard.find_by_id(params[:billboard_id]) %>
+<h3><%= billboard ? "Part of the #{billboard.name} billboard" : '' %> </h3>
+<%# <%= f.label :billboard_id %>
+<%# <%= f.number_field :billboard_id %>
+<%# <%= f.select_tag :billboard_id, options_from_collection_for_select(@billboards, 'id', 'name') %>
 <%= f.submit %>
 <% end %>
 <%= link_to 'Back', artist_songs_path(@artist) %>

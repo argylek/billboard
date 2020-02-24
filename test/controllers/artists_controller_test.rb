@@ -16,4 +16,9 @@ class ArtistsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get show" do
+    get artists_show_url
+    assert_response :success
+  end
+
 end

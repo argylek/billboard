@@ -1,6 +1,8 @@
 <h1><%= @song.name %></h1>
 <h2>By: <%= @artist.name %></h2>
 <hr />
+<% @billboard = Billboard.find_by_id(params[:billboard_id]) %>
+<h3><%= @billboard ? "Part of the #{@billboard.name} billboard" : '' %> </h3>
 <%= link_to 'Edit', edit_artist_song_path(@artist, @song) %>
-<%= link_to 'Back', artists_path %>
+<%= link_to 'Back', artist_songs_path %>
 <%= link_to 'Delete', artist_song_path(@artist, @song), method: :delete %>
